@@ -10,9 +10,9 @@ pipeline {
              }
                 
          }
-     }
+     
 
-     stages {
+    
          stage ('Testing Stage') {
              steps {
                  withMaven (maven : 'Maven-3.8.1') {
@@ -21,9 +21,9 @@ pipeline {
              }
                 
          }
-     }
+     
 
-     stages {
+     
          stage ('Deployment Stage') {
              steps {
                  withMaven (maven : 'Maven-3.8.1') {
@@ -32,6 +32,6 @@ pipeline {
              }
                 
          }
-     }
-
+     
+    }
 }
