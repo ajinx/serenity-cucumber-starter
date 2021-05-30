@@ -24,14 +24,13 @@ pipeline {
              steps {
                      sh 'mvn serenity:aggregate'
                  }
-             }
-
+             
              post {
                 success {
                     junit 'target/surefire-reports/**/*.xml' 
                 }
             }
-                
+         }       
     }
      
 }
